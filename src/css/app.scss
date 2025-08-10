@@ -1,1 +1,68 @@
 // app global css in SCSS form
+
+@font-face {
+  font-family: Inter;
+  src: url(./fonts/Inter-Regular.woff2) format('woff2');
+}
+
+body {
+  background-color: var(--primary-background);
+
+  font-family: 'Inter';
+  h6 {
+    margin: 0;
+  }
+}
+
+.q-btn__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-transform: none;
+}
+
+.q-field__control {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-50);
+}
+.q-field--outlined .q-field__control:before {
+  border: 0;
+}
+
+.q-field__input {
+  color: var(--gray-600);
+}
+
+.q-separator--horizontal {
+  width: 100%;
+}
+
+.q-field__control {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.q-field {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.q-field__control {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.q-field__native {
+  background: transparent !important;
+}
+
+.dialog-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+}
+
+.q-header {
+  background-color: var(--primary--primary-green);
+}

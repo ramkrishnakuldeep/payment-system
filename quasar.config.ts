@@ -11,7 +11,10 @@ export default defineConfig((/* ctx */) => {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
     // https://v2.quasar.dev/quasar-cli-vite/boot-files
-    boot: [],
+    boot: [
+      'i18n', // Internationalization
+      'number-format'
+    ],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#css
     css: ['app.scss'],
@@ -20,7 +23,7 @@ export default defineConfig((/* ctx */) => {
     extras: [
       // 'ionicons-v4',
       // 'mdi-v7',
-      // 'fontawesome-v6',
+      'fontawesome-v6',
       // 'eva-icons',
       // 'themify',
       // 'line-awesome',
@@ -85,9 +88,18 @@ export default defineConfig((/* ctx */) => {
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#framework
     framework: {
-      config: {},
+      config: {
+        notify: {
+          position: 'top',
+          color: 'positive',
+          timeout: 3000,
+          textColor: 'white',
+          caption: 'Success',
+          html: true,
+        },
+      },
 
-      // iconSet: 'material-icons', // Quasar icon set
+      iconSet: 'fontawesome-v6', // Quasar icon set
       // lang: 'en-US', // Quasar language pack
 
       // For special cases outside of where the auto-import strategy can have an impact
@@ -98,7 +110,9 @@ export default defineConfig((/* ctx */) => {
       // directives: [],
 
       // Quasar plugins
-      plugins: [],
+      plugins: [
+        'Notify'
+      ],
     },
 
     // animations: 'all', // --- includes all animations
